@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-15T11:37:42.141959+00:00",
+  "dataset_version": "stage2_neutral_v2",
+  "runs": {
+    "qwen_4bit": {
+      "label": "Qwen3.5-4B NF4",
+      "model_name": "Qwen/Qwen3.5-4B",
+      "quantization": "4bit_nf4",
+      "parameter_dtypes": [
+        "torch.bfloat16",
+        "torch.uint8"
+      ],
+      "selected_layer": 16,
+      "num_decoder_layers": 32,
+      "test_overall_accuracy": 1.0,
+      "test_paired_margin_effect": 10.346875000775617,
+      "test_auroc": 1.0,
+      "test_probe_accuracy": 1.0,
+      "train_test_direction_cosine": 0.9964694380760193,
+      "exact_permutation_p": 0.000244140625,
+      "causal_sign_aligned_mean": 0.7000000033680408,
+      "causal_ci95": [
+        0.6445312636247945,
+        0.7617187461089088
+      ],
+      "random_control_mean": 0.058437502175947884,
+      "wrong_layer_mean": 0.013281251877924661,
+      "wrong_layer_ci95": [
+        0.004687502243050403,
+        0.021875013995813788
+      ],
+      "same_condition_mean_absolute_delta": 0.07109380032852641,
+      "same_condition_flip_rate": 0.0,
+      "causal_fraction_of_behavior_effect": 0.067653277276044
+    },
+    "qwen_bf16": {
+      "label": "Qwen3.5-4B BF16",
+      "model_name": "Qwen/Qwen3.5-4B",
+      "quantization": "none",
+      "parameter_dtypes": [
+        "torch.bfloat16"
+      ],
+      "selected_layer": 16,
+      "num_decoder_layers": 32,
+      "test_overall_accuracy": 1.0,
+      "test_paired_margin_effect": 11.287500016876947,
+      "test_auroc": 1.0,
+      "test_probe_accuracy": 1.0,
+      "train_test_direction_cosine": 0.9979227781295776,
+      "exact_permutation_p": 0.000244140625,
+      "causal_sign_aligned_mean": 1.267968761418706,
+      "causal_ci95": [
+        1.2054687583054602,
+        1.332031273694547
+      ],
+      "random_control_mean": 0.030781260375624696,
+      "wrong_layer_mean": -0.001562491561526258,
+      "wrong_layer_ci95": [
+        -0.014062490436690495,
+        0.010937506500299605
+      ],
+      "same_condition_mean_absolute_delta": 0.10390629929588613,
+      "same_condition_flip_rate": 0.0,
+      "causal_fraction_of_behavior_effect": 0.11233388788685297
+    },
+    "ministral_bf16": {
+      "label": "Ministral-3-3B BF16",
+      "model_name": "models/ministral3-3b-instruct-2512",
+      "quantization": "checkpoint_fp8_dequant_bf16",
+      "parameter_dtypes": [
+        "torch.bfloat16"
+      ],
+      "selected_layer": 15,
+      "num_decoder_layers": 26,
+      "test_overall_accuracy": 1.0,
+      "test_paired_margin_effect": 7.478124973247759,
+      "test_auroc": 1.0,
+      "test_probe_accuracy": 1.0,
+      "train_test_direction_cosine": 0.997597336769104,
+      "exact_permutation_p": 0.000244140625,
+      "causal_sign_aligned_mean": 4.157812488486525,
+      "causal_ci95": [
+        3.946835920845915,
+        4.3648632794115105
+      ],
+      "random_control_mean": -0.03734376009786502,
+      "wrong_layer_mean": 0.001562494074460119,
+      "wrong_layer_ci95": [
+        -0.006250001818989403,
+        0.010156233134039211
+      ],
+      "same_condition_mean_absolute_delta": 0.2164062632364221,
+      "same_condition_flip_rate": 0.0,
+      "causal_fraction_of_behavior_effect": 0.5559966573654066
+    }
+  },
+  "qwen_cross_precision": {
+    "train_direction_cosine": 0.8383194164467349,
+    "test_direction_cosine": 0.8387658682923468,
+    "q4_train_to_bf16_test_cosine": 0.836260858835782,
+    "bf16_train_to_q4_test_cosine": 0.838001811842374,
+    "behavior_margin_pearson": 0.9928454518322387,
+    "pair_causal_effect_pearson": 0.6866758549751721,
+    "behavior_example_count": 320,
+    "causal_pair_count": 80
+  },
+  "audits": {
+    "qwen_4bit": {
+      "run": "Qwen3.5-4B NF4",
+      "passed": true,
+      "checks": {
+        "dataset_is_frozen_v2": true,
+        "split_sizes_are_12_8_20": true,
+        "split_scenarios_are_disjoint": true,
+        "has_320_unique_examples": true,
+        "each_scenario_has_eight_examples": true,
+        "activation_rows_align_exactly": true,
+        "activation_archive_has_expected_shape": true,
+        "behavior_gate_passed_overall_and_test": true,
+        "selected_layer_maximizes_preregistered_score": true,
+        "exact_4096_scenario_sign_enumeration": true,
+        "causal_test_has_80_pairs_20_scenarios": true,
+        "primary_effect_is_bidirectional_and_beats_random": true,
+        "wrong_layer_and_same_condition_are_smaller": true,
+        "same_condition_never_flips_decision": true
+      },
+      "activation_shape": [
+        320,
+        9,
+        2560
+      ]
+    },
+    "qwen_bf16": {
+      "run": "Qwen3.5-4B BF16",
+      "passed": true,
+      "checks": {
+        "dataset_is_frozen_v2": true,
+        "split_sizes_are_12_8_20": true,
+        "split_scenarios_are_disjoint": true,
+        "has_320_unique_examples": true,
+        "each_scenario_has_eight_examples": true,
+        "activation_rows_align_exactly": true,
+        "activation_archive_has_expected_shape": true,
+        "behavior_gate_passed_overall_and_test": true,
+        "selected_layer_maximizes_preregistered_score": true,
+        "exact_4096_scenario_sign_enumeration": true,
+        "causal_test_has_80_pairs_20_scenarios": true,
+        "primary_effect_is_bidirectional_and_beats_random": true,
+        "wrong_layer_and_same_condition_are_smaller": true,
+        "same_condition_never_flips_decision": true
+      },
+      "activation_shape": [
+        320,
+        9,
+        2560
+      ]
+    },
+    "ministral_bf16": {
+      "run": "Ministral-3-3B BF16",
+      "passed": true,
+      "checks": {
+        "dataset_is_frozen_v2": true,
+        "split_sizes_are_12_8_20": true,
+        "split_scenarios_are_disjoint": true,
+        "has_320_unique_examples": true,
+        "each_scenario_has_eight_examples": true,
+        "activation_rows_align_exactly": true,
+        "activation_archive_has_expected_shape": true,
+        "behavior_gate_passed_overall_and_test": true,
+        "selected_layer_maximizes_preregistered_score": true,
+        "exact_4096_scenario_sign_enumeration": true,
+        "causal_test_has_80_pairs_20_scenarios": true,
+        "primary_effect_is_bidirectional_and_beats_random": true,
+        "wrong_layer_and_same_condition_are_smaller": true,
+        "same_condition_never_flips_decision": true
+      },
+      "activation_shape": [
+        320,
+        9,
+        3072
+      ]
+    }
+  },
+  "all_audits_passed": true,
+  "claim_boundary": "Supports a cross-scenario, pre-decision representation of explicit candidate-action authorization whose full residual state is causally relevant. Does not establish natural self-knowledge of violating latent user intent, deception, or consciousness."
+}

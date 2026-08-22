@@ -1,0 +1,30 @@
+{
+  "experiment_name": "ministral3_3b_stage2_v2_bf16_dequant_screen",
+  "dataset_version": "stage2_neutral_v2",
+  "mode": "screen",
+  "require_behavior_gate": true,
+  "model_name": "models/ministral3-3b-instruct-2512",
+  "model_loader": "mistral3",
+  "tokenizer_loader": "mistral_common",
+  "local_files_only": true,
+  "allow_fallback_chat_template": false,
+  "device": "auto",
+  "dtype": "bfloat16",
+  "quantization": "checkpoint_fp8_dequant_bf16",
+  "max_memory": {
+    "0": "6.5GiB",
+    "cpu": "6GiB"
+  },
+  "offload_folder": "offload/ministral3-bf16-screen",
+  "layers": [0, 3, 6, 9, 12, 15, 18, 21, 25],
+  "max_scenarios": 6,
+  "train_scenario_count": 3,
+  "validation_scenario_count": 1,
+  "permutations": 4096,
+  "exact_permutation": true,
+  "random_controls": 5,
+  "output_path": "results/ministral3_bf16_dequant_screen.json",
+  "activation_output_path": "results/ministral3_bf16_dequant_screen_activations.npz",
+  "plot_dir": "plots/ministral3_bf16_dequant_screen",
+  "seed": 314159
+}

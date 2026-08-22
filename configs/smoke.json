@@ -1,0 +1,23 @@
+{
+  "experiment_name": "tiny_random_full_pipeline_smoke",
+  "mode": "formal",
+  "require_behavior_gate": false,
+  "model_name": "hf-internal-testing/tiny-random-Gemma2ForCausalLM",
+  "model_loader": "causal_lm",
+  "local_files_only": true,
+  "allow_fallback_chat_template": true,
+  "device": "cpu",
+  "dtype": "float32",
+  "quantization": "none",
+  "enable_thinking": null,
+  "layers": [0],
+  "max_scenarios": 3,
+  "train_scenario_count": 1,
+  "validation_scenario_count": 1,
+  "permutations": 20,
+  "random_controls": 1,
+  "output_path": "results/smoke.json",
+  "activation_output_path": "results/smoke_activations.npz",
+  "plot_dir": "plots/smoke",
+  "seed": 7
+}

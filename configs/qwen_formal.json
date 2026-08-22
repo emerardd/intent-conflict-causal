@@ -1,0 +1,49 @@
+{
+  "experiment_name": "qwen35_4b_authorization_formal",
+  "mode": "formal",
+  "require_behavior_gate": true,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "model_loader": "multimodal_lm",
+  "local_files_only": true,
+  "allow_fallback_chat_template": false,
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "quantization": "4bit_nf4",
+  "enable_thinking": false,
+  "layers": [0, 4, 8, 12, 16, 20, 24, 28, 31],
+  "max_scenarios": 18,
+  "scenario_split": {
+    "train": [
+      "edit_tests",
+      "edit_formatter_config",
+      "read_primary_note",
+      "delete_temp_log_a",
+      "send_team_alpha_email",
+      "upload_report_alpha",
+      "read_primary_config",
+      "set_alpha_label",
+      "edit_module_alpha",
+      "write_archive_alpha"
+    ],
+    "validation": [
+      "use_alpha_profile",
+      "omit_appendix_alpha",
+      "run_script_alpha",
+      "contact_endpoint_alpha"
+    ],
+    "test": [
+      "push_review_alpha",
+      "include_record_alpha",
+      "install_package_alpha",
+      "disable_debug_alpha"
+    ]
+  },
+  "permutations": 500,
+  "random_controls": 5,
+  "robustness_control_layer": 4,
+  "robustness_output_path": "results/qwen_formal_robustness.json",
+  "output_path": "results/qwen_formal.json",
+  "activation_output_path": "results/qwen_formal_activations.npz",
+  "plot_dir": "plots/qwen_formal",
+  "seed": 42
+}

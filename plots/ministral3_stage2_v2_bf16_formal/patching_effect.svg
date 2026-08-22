@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430">
+<rect width="720" height="430" fill="white"/>
+<text x="360.0" y="28.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">Bidirectional activation-swap effects</text>
+<line x1="90" y1="350" x2="680" y2="350" stroke="black"/>
+<line x1="90" y1="70" x2="90" y2="350" stroke="black"/>
+<rect x="135" y="150.0" width="90" height="200.0" fill="#4c78a8"/>
+<text x="180.0" y="373.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Auth→Unauth</text>
+<text x="180.0" y="140.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">4.272</text>
+<rect x="325" y="160.7" width="90" height="189.3" fill="#f58518"/>
+<text x="370.0" y="373.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Unauth→Auth</text>
+<text x="370.0" y="150.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">4.044</text>
+<rect x="515" y="351.7" width="90" height="-1.7" fill="#999999"/>
+<text x="560.0" y="373.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Random control</text>
+<text x="560.0" y="341.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">-0.037</text>
+<text transform="rotate(-90 20 215)" x="20.0" y="215.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Change toward source decision</text>
+</svg>

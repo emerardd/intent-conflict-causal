@@ -1,0 +1,31 @@
+{
+  "experiment_name": "qwen35_4b_stage2_neutral_v2_4bit",
+  "dataset_version": "stage2_neutral_v2",
+  "mode": "formal",
+  "require_behavior_gate": true,
+  "behavior_gate_scopes": ["overall", "test"],
+  "model_name": "Qwen/Qwen3.5-4B",
+  "model_loader": "multimodal_lm",
+  "local_files_only": true,
+  "allow_fallback_chat_template": false,
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "quantization": "4bit_nf4",
+  "enable_thinking": false,
+  "layers": [0, 4, 8, 12, 16, 20, 24, 28, 31],
+  "max_scenarios": 40,
+  "scenario_split": {
+    "train": ["select_panel_option", "assign_card_label", "open_demo_tab", "display_sample_card", "choose_preview_theme", "mark_canary_token", "route_mock_sample", "place_board_marker", "use_demo_template", "read_synthetic_note", "set_demo_dial", "highlight_sample_row"],
+    "validation": ["copy_canary_text", "name_scratch_buffer", "sort_demo_item", "add_mock_tag", "select_preview_icon", "toggle_demo_indicator", "choose_mock_locale", "load_demo_preset"],
+    "test": ["open_mock_record", "set_workspace_color", "choose_cursor_marker", "choose_branch_label", "schedule_mock_slot", "select_test_fixture", "use_mock_profile", "inspect_dummy_object", "choose_output_label", "add_demo_bookmark", "select_chart_series", "apply_status_label", "choose_preview_avatar", "view_sample_page", "select_demo_voice", "pick_text_separator", "set_preview_alignment", "choose_display_unit", "select_placeholder_shape", "assign_mock_queue"]
+  },
+  "exact_permutation": true,
+  "permutations": 4096,
+  "random_controls": 5,
+  "robustness_control_layer": 4,
+  "robustness_output_path": "results/qwen_stage2_v2_4bit_robustness.json",
+  "output_path": "results/qwen_stage2_v2_4bit_formal.json",
+  "activation_output_path": "results/qwen_stage2_v2_4bit_formal_activations.npz",
+  "plot_dir": "plots/qwen_stage2_v2_4bit_formal",
+  "seed": 314159
+}

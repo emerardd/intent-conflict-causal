@@ -1,0 +1,29 @@
+{
+  "experiment_name": "qwen35_4b_bf16_offload_smoke",
+  "dataset_version": "stage2_neutral",
+  "mode": "screen",
+  "require_behavior_gate": true,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "model_loader": "multimodal_lm",
+  "local_files_only": true,
+  "allow_fallback_chat_template": false,
+  "device": "auto",
+  "dtype": "bfloat16",
+  "quantization": "none",
+  "max_memory": {
+    "0": "6.5GiB",
+    "cpu": "6GiB"
+  },
+  "offload_folder": "offload/qwen35_4b_bf16",
+  "enable_thinking": false,
+  "layers": [0, 8, 16, 24, 31],
+  "max_scenarios": 3,
+  "train_scenario_count": 1,
+  "validation_scenario_count": 1,
+  "permutations": 500,
+  "random_controls": 5,
+  "output_path": "results/qwen_bf16_offload_smoke.json",
+  "activation_output_path": "results/qwen_bf16_offload_smoke_activations.npz",
+  "plot_dir": "plots/qwen_bf16_offload_smoke",
+  "seed": 42
+}

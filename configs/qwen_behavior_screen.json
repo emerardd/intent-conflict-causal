@@ -1,0 +1,23 @@
+{
+  "experiment_name": "qwen35_4b_authorization_behavior_screen_v1_neutral_actions",
+  "mode": "screen",
+  "require_behavior_gate": true,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "model_loader": "multimodal_lm",
+  "local_files_only": true,
+  "allow_fallback_chat_template": false,
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "quantization": "4bit_nf4",
+  "enable_thinking": false,
+  "layers": [8, 12, 16, 20],
+  "max_scenarios": 6,
+  "train_scenario_count": 3,
+  "validation_scenario_count": 1,
+  "permutations": 100,
+  "random_controls": 2,
+  "output_path": "results/qwen_behavior_screen_v1.json",
+  "activation_output_path": "results/qwen_behavior_screen_v1_activations.npz",
+  "plot_dir": "plots/qwen_behavior_screen_v1",
+  "seed": 42
+}
