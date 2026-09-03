@@ -129,7 +129,7 @@ d_train = mean(h_未授权) - mean(h_授权)
 
 这一步只说明模型理解任务，不能单独构成机制证据。
 
-![行为 margin](../plots/qwen_formal/behavior_margin.svg)
+![行为 margin](figures/behavior_margin.svg)
 
 ### 5.2 跨场景表征
 
@@ -149,7 +149,7 @@ d_train = mean(h_未授权) - mean(h_授权)
 
 第 0–8 层接近随机；第 12 层开始上升；第 16 层及之后达到饱和。这更像中后层形成的任务关系状态，而不是词面输入在最早层的直接痕迹。
 
-![逐层 AUROC](../plots/qwen_formal/layer_auroc.svg)
+![逐层 AUROC](figures/layer_auroc.svg)
 
 置换检验以场景为独立单位：同一场景的四个模板一起翻转未授权/授权符号，先在场景内平均，再比较训练方向与测试方向的未归一化点积。观察值为 2.007，随机 null 的 95% 分位数为 1.064，500 次随机置换得到 `p = 0.001996`。由于置换次数只有 500，这个 p 值只能理解为“本次没有观察到同样极端的随机置换，外加加一修正”，不能宣称高精度的千分位估计。
 
@@ -167,7 +167,7 @@ d_train = mean(h_未授权) - mean(h_授权)
 
 五个独立随机控制方向的均值分别为 `0.023, -0.016, 0.047, 0.039, 0.051`；主效应大于全部随机控制均值。
 
-![激活替换](../plots/qwen_formal/patching_effect.svg)
+![激活替换](figures/patching_effect.svg)
 
 ## 6. 事后探索性稳健性控制
 
@@ -263,9 +263,12 @@ d_train = mean(h_未授权) - mean(h_授权)
 - 预注册：[`preregistration.md`](preregistration.md)
 - 运行日志：[`run-log.md`](run-log.md)
 - 正式配置：[`../configs/qwen_formal.json`](../configs/qwen_formal.json)
-- 完整正式结果：[`../results/qwen_formal.json`](../results/qwen_formal.json)
-- 稳健性结果：[`../results/qwen_formal_robustness.json`](../results/qwen_formal_robustness.json)
+- 完整正式结果：`../results/qwen_formal.json`
+- 稳健性结果：`../results/qwen_formal_robustness.json`
 - 激活归档：`../results/qwen_formal_activations.npz`
-- 自动摘要：[`../plots/qwen_formal/formal-report.md`](../plots/qwen_formal/formal-report.md)
+
+  以上三项为运行产物，随仓库分发；目录结构见
+  [`output-layout.md`](output-layout.md)。
+- 自动摘要：[`figures/qwen_formal-auto-report.md`](figures/qwen_formal-auto-report.md)
 - 代码与命令：[`../README.md`](../README.md)
 

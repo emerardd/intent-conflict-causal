@@ -1,0 +1,281 @@
+{
+  "created_at_utc": "2026-09-02T06:05:48.232469+00:00",
+  "v1": {
+    "checks": {
+      "source_snapshot_hashes": true,
+      "prompt_hash": true,
+      "frozen_data_identity": true,
+      "independent_truth_table": true,
+      "full_factorial_balance": true,
+      "generation_argmax_agreement": true,
+      "saved_statistics_recomputed": true,
+      "activation_shape_identity_finiteness": true
+    },
+    "all_checks_passed": true,
+    "screen_passed": false,
+    "total_correct": 20,
+    "total": 32,
+    "total_B": 28,
+    "noncanonical_B_count": 24,
+    "noncanonical_n": 24,
+    "cells": {
+      "policy0_map0": {
+        "correct": 8,
+        "n": 8,
+        "observed_symbols": {
+          "A": 4,
+          "B": 4
+        }
+      },
+      "policy0_map1": {
+        "correct": 4,
+        "n": 8,
+        "observed_symbols": {
+          "B": 8
+        }
+      },
+      "policy1_map0": {
+        "correct": 4,
+        "n": 8,
+        "observed_symbols": {
+          "B": 8
+        }
+      },
+      "policy1_map1": {
+        "correct": 4,
+        "n": 8,
+        "observed_symbols": {
+          "B": 8
+        }
+      }
+    },
+    "truth_table": [
+      {
+        "authorized": true,
+        "reversed_policy": false,
+        "reversed_mapping": false,
+        "expected": "A",
+        "observed_counts": {
+          "A": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": true,
+        "reversed_policy": false,
+        "reversed_mapping": true,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": true,
+        "reversed_policy": true,
+        "reversed_mapping": false,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": true,
+        "reversed_policy": true,
+        "reversed_mapping": true,
+        "expected": "A",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": false,
+        "reversed_mapping": false,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": false,
+        "reversed_mapping": true,
+        "expected": "A",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": true,
+        "reversed_mapping": false,
+        "expected": "A",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": true,
+        "reversed_mapping": true,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      }
+    ],
+    "formal_directory_exists": false,
+    "claim_boundary": "Independent artifact audit, not a rerun of model inference or proof of a mechanism."
+  },
+  "v2_pilot": {
+    "checks": {
+      "source_snapshot_hashes": true,
+      "prompt_hash": true,
+      "frozen_data_identity": true,
+      "independent_truth_table": true,
+      "full_factorial_balance": true,
+      "generation_argmax_agreement": true,
+      "saved_statistics_recomputed": true,
+      "activation_shape_identity_finiteness": true
+    },
+    "all_checks_passed": true,
+    "screen_passed": true,
+    "total_correct": 16,
+    "total": 16,
+    "total_B": 8,
+    "noncanonical_B_count": 4,
+    "noncanonical_n": 8,
+    "cells": {
+      "policy0_map0": {
+        "correct": 8,
+        "n": 8,
+        "observed_symbols": {
+          "A": 4,
+          "B": 4
+        }
+      },
+      "policy0_map1": {
+        "correct": 8,
+        "n": 8,
+        "observed_symbols": {
+          "B": 4,
+          "A": 4
+        }
+      }
+    },
+    "truth_table": [
+      {
+        "authorized": true,
+        "reversed_policy": false,
+        "reversed_mapping": false,
+        "expected": "A",
+        "observed_counts": {
+          "A": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": true,
+        "reversed_policy": false,
+        "reversed_mapping": true,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": false,
+        "reversed_mapping": false,
+        "expected": "B",
+        "observed_counts": {
+          "B": 4
+        },
+        "n": 4
+      },
+      {
+        "authorized": false,
+        "reversed_policy": false,
+        "reversed_mapping": true,
+        "expected": "A",
+        "observed_counts": {
+          "A": 4
+        },
+        "n": 4
+      }
+    ],
+    "formal_directory_exists": true,
+    "claim_boundary": "Independent artifact audit, not a rerun of model inference or proof of a mechanism."
+  },
+  "v2_formal": {
+    "frozen_sources_prompts_rows": true,
+    "independent_behavior": {
+      "train/seen/map0": {
+        "correct": 32,
+        "n": 32
+      },
+      "train/seen/map1": {
+        "correct": 32,
+        "n": 32
+      },
+      "validation/seen/map0": {
+        "correct": 16,
+        "n": 16
+      },
+      "validation/seen/map1": {
+        "correct": 16,
+        "n": 16
+      },
+      "test/seen/map0": {
+        "correct": 48,
+        "n": 48
+      },
+      "test/seen/map1": {
+        "correct": 48,
+        "n": 48
+      },
+      "test/unseen/map0": {
+        "correct": 48,
+        "n": 48
+      },
+      "test/unseen/map1": {
+        "correct": 48,
+        "n": 48
+      }
+    },
+    "generation_correct": 32,
+    "generation_total": 32,
+    "first_token_agreement": true,
+    "pairwise_auc_all_21_sites": true,
+    "validation_only_layer_selection": true,
+    "independent_direction_and_clustered_projection_ci": true,
+    "selected_layer": 16,
+    "split_factorial_balance": true,
+    "frozen_gates_recomputed": {
+      "train_validation_behavior": true,
+      "test_seen_behavior": true,
+      "generation": true,
+      "validation_representation": true,
+      "test_representation": true
+    },
+    "interventions": {
+      "paired_effects_and_scenario_ci": true,
+      "flips_and_format_counts": true,
+      "main_random_comparison": true,
+      "decision_rule_recomputed": true,
+      "unit_axes_random_orthogonality": true,
+      "patched_generation_agreement": true,
+      "n_forwards": 480,
+      "conditional_effect_supported": false
+    }
+  },
+  "scope": "Independent artifact recomputation, not independent model-inference replication."
+}

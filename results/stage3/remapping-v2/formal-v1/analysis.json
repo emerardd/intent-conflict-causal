@@ -1,0 +1,977 @@
+{
+  "config": {
+    "experiment": "stage3_remapping_v2_after_failed_factorial_pilot",
+    "seed": 280826,
+    "model_name": "Qwen/Qwen3.5-4B",
+    "model_loader": "multimodal_lm",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "quantization": "4bit_nf4",
+    "enable_thinking": false,
+    "layers": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "positions": [
+      "pre_policy",
+      "pre_mapping",
+      "answer"
+    ],
+    "primary_position": "pre_mapping",
+    "screen_min_cell_top1_accuracy": 0.9,
+    "formal_min_cell_top1_accuracy": 0.9,
+    "generation_min_exact_accuracy": 0.9,
+    "validation_min_auroc": 0.75,
+    "test_min_auroc": 0.75,
+    "alphas": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "bootstrap_samples": 5000,
+    "random_controls": 2,
+    "include_action_control": false,
+    "generation_max_new_tokens": 4,
+    "output_root": "results/stage3/remapping-v2",
+    "stage2_reference": "results/qwen_stage2_v2_4bit_formal.json"
+  },
+  "behavior": {
+    "train/seen": {
+      "n": 64,
+      "cells": {
+        "policy0_map0": {
+          "n": 32,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9992997068911791
+        },
+        "policy0_map1": {
+          "n": 32,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9988343473523855
+        }
+      },
+      "min_cell_top1_accuracy": 1.0
+    },
+    "validation/seen": {
+      "n": 32,
+      "cells": {
+        "policy0_map0": {
+          "n": 16,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9992951042950153
+        },
+        "policy0_map1": {
+          "n": 16,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.998761672526598
+        }
+      },
+      "min_cell_top1_accuracy": 1.0
+    },
+    "test/seen": {
+      "n": 96,
+      "cells": {
+        "policy0_map0": {
+          "n": 48,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9991806124647459
+        },
+        "policy0_map1": {
+          "n": 48,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9985758326947689
+        }
+      },
+      "min_cell_top1_accuracy": 1.0
+    },
+    "test/unseen": {
+      "n": 96,
+      "cells": {
+        "policy0_map0": {
+          "n": 48,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9992728494107723
+        },
+        "policy0_map1": {
+          "n": 48,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9986653725306193
+        }
+      },
+      "min_cell_top1_accuracy": 1.0
+    },
+    "generation": {
+      "n": 32,
+      "exact_accuracy": 1.0,
+      "first_token_agreement": true,
+      "errors": []
+    }
+  },
+  "sites": [
+    {
+      "selection_score": 0.484375,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.484375,
+          "True": 0.484375
+        },
+        "test/seen": {
+          "False": 0.484375,
+          "True": 0.484375
+        },
+        "test/unseen": {
+          "False": 0.4930555555555556,
+          "True": 0.4930555555555556
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.484375,
+          "test/seen": 0.484375,
+          "test/unseen": 0.4930555555555556
+        },
+        "map1_to_0": {
+          "validation/seen": 0.484375,
+          "test/seen": 0.484375,
+          "test/unseen": 0.4930555555555556
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.011267094424069231,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 4
+    },
+    {
+      "selection_score": 0.828125,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.828125,
+          "True": 0.828125
+        },
+        "test/seen": {
+          "False": 0.8333333333333334,
+          "True": 0.8333333333333334
+        },
+        "test/unseen": {
+          "False": 0.5729166666666666,
+          "True": 0.5729166666666666
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.828125,
+          "test/seen": 0.8333333333333334,
+          "test/unseen": 0.5729166666666666
+        },
+        "map1_to_0": {
+          "validation/seen": 0.828125,
+          "test/seen": 0.8333333333333334,
+          "test/unseen": 0.5729166666666666
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.07257830181067351,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 8
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 0.8958333333333334,
+          "True": 0.8958333333333334
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.8958333333333334
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.8958333333333334
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.23238985659993347,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 12
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 0.921875,
+          "True": 0.921875
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.921875
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.921875
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.4475045339030025,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 16
+    },
+    {
+      "selection_score": 0.90625,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.90625,
+          "True": 0.90625
+        },
+        "test/seen": {
+          "False": 0.9375,
+          "True": 0.9375
+        },
+        "test/unseen": {
+          "False": 0.8038194444444445,
+          "True": 0.8038194444444445
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.90625,
+          "test/seen": 0.9375,
+          "test/unseen": 0.8038194444444445
+        },
+        "map1_to_0": {
+          "validation/seen": 0.90625,
+          "test/seen": 0.9375,
+          "test/unseen": 0.8038194444444445
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.6806373984923585,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 20
+    },
+    {
+      "selection_score": 0.765625,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.765625,
+          "True": 0.765625
+        },
+        "test/seen": {
+          "False": 0.845486111111111,
+          "True": 0.845486111111111
+        },
+        "test/unseen": {
+          "False": 0.7135416666666666,
+          "True": 0.7135416666666666
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.765625,
+          "test/seen": 0.845486111111111,
+          "test/unseen": 0.7135416666666666
+        },
+        "map1_to_0": {
+          "validation/seen": 0.765625,
+          "test/seen": 0.845486111111111,
+          "test/unseen": 0.7135416666666666
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.889843619902098,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 24
+    },
+    {
+      "selection_score": 0.640625,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.640625,
+          "True": 0.640625
+        },
+        "test/seen": {
+          "False": 0.6822916666666666,
+          "True": 0.6822916666666666
+        },
+        "test/unseen": {
+          "False": 0.6840277777777778,
+          "True": 0.6840277777777778
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.640625,
+          "test/seen": 0.6822916666666666,
+          "test/unseen": 0.6840277777777778
+        },
+        "map1_to_0": {
+          "validation/seen": 0.640625,
+          "test/seen": 0.6822916666666666,
+          "test/unseen": 0.6840277777777778
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 1.6351745325664095,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_policy",
+      "layer": 28
+    },
+    {
+      "selection_score": 0.453125,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.453125,
+          "True": 0.453125
+        },
+        "test/seen": {
+          "False": 0.4600694444444444,
+          "True": 0.4600694444444444
+        },
+        "test/unseen": {
+          "False": 0.5225694444444444,
+          "True": 0.5225694444444444
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.453125,
+          "test/seen": 0.4600694444444444,
+          "test/unseen": 0.5225694444444444
+        },
+        "map1_to_0": {
+          "validation/seen": 0.453125,
+          "test/seen": 0.4600694444444444,
+          "test/unseen": 0.5225694444444444
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.010742150582885168,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 4
+    },
+    {
+      "selection_score": 0.890625,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.890625,
+          "True": 0.890625
+        },
+        "test/seen": {
+          "False": 0.9652777777777778,
+          "True": 0.9652777777777778
+        },
+        "test/unseen": {
+          "False": 0.6319444444444444,
+          "True": 0.6319444444444444
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.890625,
+          "test/seen": 0.9652777777777778,
+          "test/unseen": 0.6319444444444444
+        },
+        "map1_to_0": {
+          "validation/seen": 0.890625,
+          "test/seen": 0.9652777777777778,
+          "test/unseen": 0.6319444444444444
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.08271152483193017,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 8
+    },
+    {
+      "selection_score": 0.953125,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.953125,
+          "True": 0.953125
+        },
+        "test/seen": {
+          "False": 0.8784722222222222,
+          "True": 0.8784722222222222
+        },
+        "test/unseen": {
+          "False": 0.7378472222222223,
+          "True": 0.7378472222222223
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.953125,
+          "test/seen": 0.8784722222222222,
+          "test/unseen": 0.7378472222222223
+        },
+        "map1_to_0": {
+          "validation/seen": 0.953125,
+          "test/seen": 0.8784722222222222,
+          "test/unseen": 0.7378472222222223
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.1972753052316385,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 12
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 0.8975694444444445,
+          "True": 0.8975694444444445
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.8975694444444445
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 0.8975694444444445
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.6105854692026618,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 16
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 0.8836805555555556,
+          "True": 0.8836805555555556
+        },
+        "test/unseen": {
+          "False": 0.7465277777777777,
+          "True": 0.7465277777777777
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 0.8836805555555556,
+          "test/unseen": 0.7465277777777777
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 0.8836805555555556,
+          "test/unseen": 0.7465277777777777
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.7724859962944794,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 20
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 0.8003472222222222,
+          "True": 0.8003472222222222
+        },
+        "test/unseen": {
+          "False": 0.6684027777777778,
+          "True": 0.6684027777777778
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 0.8003472222222222,
+          "test/unseen": 0.6684027777777778
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 0.8003472222222222,
+          "test/unseen": 0.6684027777777778
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 0.9240585226680441,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 24
+    },
+    {
+      "selection_score": 0.796875,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.796875,
+          "True": 0.796875
+        },
+        "test/seen": {
+          "False": 0.7239583333333333,
+          "True": 0.7239583333333333
+        },
+        "test/unseen": {
+          "False": 0.5972222222222222,
+          "True": 0.5972222222222222
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.796875,
+          "test/seen": 0.7239583333333333,
+          "test/unseen": 0.5972222222222222
+        },
+        "map1_to_0": {
+          "validation/seen": 0.796875,
+          "test/seen": 0.7239583333333333,
+          "test/unseen": 0.5972222222222222
+        }
+      },
+      "nuisance_rank": 0,
+      "train_projection_gap": 1.5135210996104833,
+      "retained_norm_fraction": 1.0,
+      "raw_auth_token_cosine": 0.0,
+      "position": "pre_mapping",
+      "layer": 28
+    },
+    {
+      "selection_score": 0.296875,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.515625,
+          "True": 0.296875
+        },
+        "test/seen": {
+          "False": 0.4861111111111111,
+          "True": 0.5052083333333334
+        },
+        "test/unseen": {
+          "False": 0.48437500000000006,
+          "True": 0.5
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.296875,
+          "test/seen": 0.5399305555555556,
+          "test/unseen": 0.48263888888888895
+        },
+        "map1_to_0": {
+          "validation/seen": 0.5625,
+          "test/seen": 0.515625,
+          "test/unseen": 0.4774305555555556
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 0.008830580208759816,
+      "retained_norm_fraction": 0.9741525019485054,
+      "raw_auth_token_cosine": 0.22589135208650002,
+      "position": "answer",
+      "layer": 4
+    },
+    {
+      "selection_score": 0.625,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.6875,
+          "True": 0.65625
+        },
+        "test/seen": {
+          "False": 0.7152777777777778,
+          "True": 0.71875
+        },
+        "test/unseen": {
+          "False": 0.5868055555555555,
+          "True": 0.5399305555555556
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.625,
+          "test/seen": 0.7534722222222222,
+          "test/unseen": 0.5277777777777778
+        },
+        "map1_to_0": {
+          "validation/seen": 0.671875,
+          "test/seen": 0.6475694444444444,
+          "test/unseen": 0.5399305555555556
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 0.023078407227478982,
+      "retained_norm_fraction": 0.9989955943605845,
+      "raw_auth_token_cosine": -0.04480850865787111,
+      "position": "answer",
+      "layer": 8
+    },
+    {
+      "selection_score": 0.921875,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 0.9375,
+          "True": 0.921875
+        },
+        "test/seen": {
+          "False": 0.9774305555555556,
+          "True": 0.9670138888888888
+        },
+        "test/unseen": {
+          "False": 0.8177083333333334,
+          "True": 0.8385416666666667
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.984375,
+          "test/seen": 0.9513888888888888,
+          "test/unseen": 0.8229166666666666
+        },
+        "map1_to_0": {
+          "validation/seen": 0.9375,
+          "test/seen": 0.9774305555555556,
+          "test/unseen": 0.8177083333333334
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 0.11360158677908272,
+      "retained_norm_fraction": 0.9877783278974335,
+      "raw_auth_token_cosine": 0.1558652460818324,
+      "position": "answer",
+      "layer": 12
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 1.0,
+          "True": 1.0
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 1.154459236262296,
+      "retained_norm_fraction": 0.9966086950693129,
+      "raw_auth_token_cosine": 0.08228674809616311,
+      "position": "answer",
+      "layer": 16
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 1.0,
+          "True": 1.0
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 5.553269830712603,
+      "retained_norm_fraction": 0.9986920625001666,
+      "raw_auth_token_cosine": -0.05112889886515795,
+      "position": "answer",
+      "layer": 20
+    },
+    {
+      "selection_score": 1.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 1.0,
+          "True": 1.0
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        },
+        "map1_to_0": {
+          "validation/seen": 1.0,
+          "test/seen": 1.0,
+          "test/unseen": 1.0
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 7.7123524446987135,
+      "retained_norm_fraction": 0.9991935201806484,
+      "raw_auth_token_cosine": 0.04015357056357573,
+      "position": "answer",
+      "layer": 24
+    },
+    {
+      "selection_score": 0.0,
+      "mapping_auroc": {
+        "validation/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/seen": {
+          "False": 1.0,
+          "True": 1.0
+        },
+        "test/unseen": {
+          "False": 1.0,
+          "True": 1.0
+        }
+      },
+      "cross_mapping": {
+        "map0_to_1": {
+          "validation/seen": 0.0,
+          "test/seen": 0.22395833333333331,
+          "test/unseen": 0.3680555555555556
+        },
+        "map1_to_0": {
+          "validation/seen": 0.0,
+          "test/seen": 0.0034722222222222238,
+          "test/unseen": 0.0
+        }
+      },
+      "nuisance_rank": 1,
+      "train_projection_gap": 10.047662038588541,
+      "retained_norm_fraction": 0.9965023799501507,
+      "raw_auth_token_cosine": 0.0835643868743465,
+      "position": "answer",
+      "layer": 28
+    }
+  ],
+  "selected": {
+    "selection_score": 1.0,
+    "mapping_auroc": {
+      "validation/seen": {
+        "False": 1.0,
+        "True": 1.0
+      },
+      "test/seen": {
+        "False": 1.0,
+        "True": 1.0
+      },
+      "test/unseen": {
+        "False": 0.8975694444444445,
+        "True": 0.8975694444444445
+      }
+    },
+    "cross_mapping": {
+      "map0_to_1": {
+        "validation/seen": 1.0,
+        "test/seen": 1.0,
+        "test/unseen": 0.8975694444444445
+      },
+      "map1_to_0": {
+        "validation/seen": 1.0,
+        "test/seen": 1.0,
+        "test/unseen": 0.8975694444444445
+      }
+    },
+    "nuisance_rank": 0,
+    "train_projection_gap": 0.6105854692026618,
+    "retained_norm_fraction": 1.0,
+    "raw_auth_token_cosine": 0.0,
+    "position": "pre_mapping",
+    "layer": 16
+  },
+  "projection": {
+    "seen": {
+      "scenario_effects": [
+        0.595309529028706,
+        0.5907631130337032,
+        0.6023644148658636,
+        0.6507510659365363,
+        0.5200575949118671,
+        0.5545700231379815,
+        0.5835408300539318,
+        0.5126633282956155,
+        0.5174923293443441,
+        0.5750196407728989,
+        0.635550898386106,
+        0.575418319258377
+      ],
+      "n_scenarios": 12,
+      "positive_scenarios": 12,
+      "mean": 0.5761250905854943,
+      "ci95": [
+        0.5530886846772771,
+        0.6003756999762362
+      ],
+      "one_sided_sign_p": 0.000244140625
+    },
+    "unseen": {
+      "scenario_effects": [
+        0.22489778725658538,
+        0.2559877833638018,
+        0.26335384187724564,
+        0.2991148506636454,
+        0.1502018273688781,
+        0.18867222151421736,
+        0.23464488424662866,
+        0.2884444003516091,
+        0.25898506225441986,
+        0.2237637781635673,
+        0.31207569035623384,
+        0.2734253649536549
+      ],
+      "n_scenarios": 12,
+      "positive_scenarios": 12,
+      "mean": 0.24779729103087392,
+      "ci95": [
+        0.22186344893671406,
+        0.27185990319042436
+      ],
+      "one_sided_sign_p": 0.000244140625
+    }
+  },
+  "stage2_layer16_transfer": {
+    "pre_policy": {
+      "False": 0.7256944444444444,
+      "True": 0.7256944444444444
+    },
+    "pre_mapping": {
+      "False": 0.8541666666666667,
+      "True": 0.8541666666666667
+    },
+    "answer": {
+      "False": 1.0,
+      "True": 1.0
+    }
+  },
+  "gates": {
+    "train_validation_behavior": true,
+    "test_seen_behavior": true,
+    "generation": true,
+    "validation_representation": true,
+    "test_representation": true
+  },
+  "intervention_eligible": true,
+  "claim_boundary": "Token-remapping control ONLY; authorization and normative execute/block remain confounded."
+}

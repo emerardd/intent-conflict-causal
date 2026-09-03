@@ -1,0 +1,76 @@
+{
+  "created_at_utc": "2026-08-28T11:46:21.890587+00:00",
+  "config": {
+    "experiment": "stage4_paired_vector_decomposition_v1",
+    "seed": 290826,
+    "model_name": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "layer": 16,
+    "positions": [
+      "pre_mapping",
+      "answer"
+    ],
+    "modes": [
+      "full",
+      "parallel",
+      "perpendicular",
+      "random_full",
+      "random_parallel"
+    ],
+    "nf4_test_scenarios": 12,
+    "bf16_test_scenarios": 2,
+    "bootstrap_samples": 5000,
+    "baseline_min_accuracy": 0.9,
+    "reference": "results/stage3/remapping-v2/formal-v1",
+    "output_root": "results/stage4"
+  },
+  "precision": "bf16",
+  "python": "3.12.10",
+  "source_sha256": {
+    "src/intent_conflict/__init__.py": "47d018ebe26a2a0f4621edd7ea246c0dafc100bd0befaca0be871ac05dc073c6",
+    "src/intent_conflict/analysis.py": "9539f418acdbf2c380c3db13a515d6adec9f2511855d6fd6d4701ae2505c4d15",
+    "src/intent_conflict/cli.py": "19fb9e4ca6169189dfcf4d9de9be80b08db56f8015f306f49ab30b45e6d28dac",
+    "src/intent_conflict/data.py": "737199ec8a280fd8f593c79e56c3bb1440e2ca9e1dc9680a15643df281cc54e1",
+    "src/intent_conflict/experiment.py": "00adda44bf9d6f065fa7c02a04803f0923a1b31b929549a5f5ccd445c0d752cb",
+    "src/intent_conflict/model.py": "22a7199c04cf7ccca384c882f40af3b744d73a4e9d7ea910bd627b569b94c59c",
+    "src/intent_conflict/report.py": "5d08e0f48e8c3c6fb13c3487ba1858b3cdd73869d2bce122744e730af5c74530",
+    "src/intent_conflict/stage2_synthesis.py": "f4ca42c6b627ad2d2132c105de83bff7908cf078c8e9665b7f74ed3b4cc0cef7",
+    "src/intent_conflict/stage3.py": "6c32e2003f09d166964c485fe334e8cd6929cb23203f2762596e753d464ba06f",
+    "src/intent_conflict/stage3_analysis.py": "55f01122173dcfcf6bdde49af432ec823cc51f74fbdc2094fde8074b5da34ac3",
+    "src/intent_conflict/stage3_audit.py": "d6051fd7dc4b93ab0c6d2b1ae312c6c22a72a4639b4ff80584a5b1fcdddb4a46",
+    "src/intent_conflict/stage3_data.py": "3f7e98bdd1c0f598188264d5eb9eb10909e622f59df84cdf46821eac925b793a",
+    "src/intent_conflict/stage3_model.py": "5fe5bbf2844ea26c19d08318fb5ca4ad6a4ec3e6a9cfe594071e88ccb22cc801",
+    "src/intent_conflict/stage3_prefix_diagnostic.py": "dc6f448792516574a98cf6711a072ad153ee3433a9f42fb69b2252514ea73ad6",
+    "src/intent_conflict/stage3_remap.py": "0cd18e44c7bad24d42c5a544eb669e25ab0d00f245c31506d1898a396f3d80fe",
+    "src/intent_conflict/stage4.py": "42879311aa3bc0155e53934b416a5e0c70215d7a991bfe4a5e6b322a39830768",
+    "src/intent_conflict/tokenization.py": "9087b43fcb3ca78dbc44864b8c49cac699cb493410336ac64cfd2f9130f2eb82",
+    "configs/stage4_diagnostic.json": "5d6d56f41a6d1846e24927782bf4249767a92a471549a82127ead25d1c78307e",
+    "docs/stage4-preregistration.md": "9589b85046eb762b8b811fba4b00aaaca1dc522db8921be81ab2c0de44e83507",
+    "tests/test_stage4.py": "0f0b44b0bef86755a4633117a3f7a45b96accafe728aa452a8b7ffbcbcf73a17"
+  },
+  "reference_sha256": {
+    "baseline.json": "a47bdcd1350150fdac2d9af8541923f07ae2b7c808ea6d26f01bbeb2d855eba6",
+    "activations.npz": "ef501b1fae1660943d5f7d0a4ea3a95429f6a7193e0c76dd4b59811ba412a5cf",
+    "prompts.json": "62ce3f68265be60d30183792081985241d3cb0b681710db1f6e27527cd1052b8"
+  },
+  "recipient_ids": [
+    "remap_v2__puppet_costume__seen__candidate_first__auth1__policy0__map0",
+    "remap_v2__puppet_costume__seen__candidate_first__auth1__policy0__map1",
+    "remap_v2__puppet_costume__seen__candidate_first__auth0__policy0__map0",
+    "remap_v2__puppet_costume__seen__candidate_first__auth0__policy0__map1",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth1__policy0__map0",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth1__policy0__map1",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth0__policy0__map0",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth0__policy0__map1"
+  ],
+  "donor_indices": [
+    2,
+    3,
+    0,
+    1,
+    6,
+    7,
+    4,
+    5
+  ]
+}

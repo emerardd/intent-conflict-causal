@@ -1,0 +1,68 @@
+{
+  "status": "pass",
+  "independent_of_stage5_summary_code": true,
+  "identity_checks": {
+    "baseline_rows": 48,
+    "scenario_clusters": 12,
+    "intervention_rows": 576,
+    "conditions": 12,
+    "rows_per_condition": [
+      48
+    ]
+  },
+  "mapping_accuracy": {
+    "False": 1.0,
+    "True": 0.9583333333333334
+  },
+  "baseline_errors": [
+    "stage5__constellation_card__auth0__map1"
+  ],
+  "independent_primary": {
+    "answer_local_direction_specific": {
+      "mean": 0.36718748901087866,
+      "ci95": [
+        0.30208331794565313,
+        0.429687468600423
+      ]
+    },
+    "answer_full_state_positive_control": {
+      "mean": 0.4348958439877606,
+      "ci95": [
+        0.3723958345883754,
+        0.4947917040906153
+      ]
+    },
+    "position_interaction": {
+      "mean": 0.3229166853343486,
+      "ci95": [
+        0.26041669093901876,
+        0.3802083768959468
+      ]
+    }
+  },
+  "independent_pre_mapping_full": {
+    "mean": -0.0026041225476850136,
+    "ci95": [
+      -0.03385410273810218,
+      0.02343755528308975
+    ]
+  },
+  "independent_decisions": {
+    "answer_local_direction_specific": true,
+    "answer_full_state_positive_control": true,
+    "position_interaction_positive": true,
+    "pre_mapping_full_within_equivalence_bound": true
+  },
+  "categorical": {
+    "all_top1_flips": 7,
+    "flips_toward_donor": 0,
+    "all_flips_from_single_tied_baseline": true
+  },
+  "delivery": {
+    "generation_checks": 24,
+    "generation_agreement": true,
+    "null_checks": 2,
+    "max_patch_norm_error": 0.0028378314023813633,
+    "frozen_source_hashes_ok": true
+  }
+}

@@ -47,7 +47,7 @@ Stage 1 给出了强阳性结果，但样本较小，且用户正确指出 Gemma
 | Qwen3.5-4B BF16 | 16/32 | 11.288 | 1.000 | 0.998 | 0.000244 | 1.268 [1.205, 1.332] | 0.031 |
 | Ministral-3-3B BF16 | 15/26 | 7.478 | 1.000 | 0.998 | 0.000244 | 4.158 [3.947, 4.365] | -0.037 |
 
-![跨层 AUROC](../plots/stage2_comparison/layer_auroc_comparison.png)
+![跨层 AUROC](figures/layer_auroc_comparison.png)
 
 三个模型/精度设置的层曲线都显示相同的定性时序：早期层接近随机，中层迅速形成跨场景可读的授权状态。选层出现并列时使用扫描顺序中最早达到最高预注册分数的层，而没有借测试集改选更晚层。
 
@@ -59,7 +59,7 @@ Stage 1 给出了强阳性结果，但样本较小，且用户正确指出 Gemma
 | Qwen3.5-4B BF16 | 1.268 | -0.002 [-0.014, 0.011] | 0.104 | 0.0% |
 | Ministral-3-3B BF16 | 4.158 | 0.002 [-0.006, 0.010] | 0.216 | 0.0% |
 
-![因果对照](../plots/stage2_comparison/causal_controls_comparison.png)
+![因果对照](figures/causal_controls_comparison.png)
 
 图中为不同对照相对于该运行测试集行为成对 margin 的效应比例，因此可在模型 logit 尺度不同的情况下作定性比较。Ministral 的完整状态交换恢复了更大比例的行为差异；这可能表示选中层更接近决策瓶颈，也可能来自架构、校准或 residual 尺度差异，不能仅凭这个比例宣称它“更有授权意识”。
 
@@ -67,7 +67,7 @@ Stage 1 给出了强阳性结果，但样本较小，且用户正确指出 Gemma
 
 Qwen NF4 与 BF16 在同一 320 个提示上的行为 margin Pearson `r=0.993`；80 个测试配对的因果效应 Pearson `r=0.687`。训练方向余弦为 `0.838`，测试方向余弦为 `0.839`。这说明量化改变了内部几何和效应尺度，却没有创造阳性现象；BF16 的主因果效应反而更强。
 
-![Qwen 精度一致性](../plots/stage2_comparison/qwen_precision_agreement.png)
+![Qwen 精度一致性](figures/qwen_precision_agreement.png)
 
 ## 4. 支持什么，不支持什么
 

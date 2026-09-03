@@ -1,0 +1,60 @@
+{
+  "passed": false,
+  "config_sha256": "c34b3fa26d1941dfa94ae8af2236482b2663f838daccc775c6033a49ef060573",
+  "behavior": {
+    "screen/seen": {
+      "n": 32,
+      "cells": {
+        "policy0_map0": {
+          "n": 8,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.99356659501791
+        },
+        "policy0_map1": {
+          "n": 8,
+          "global_top1_accuracy": 0.5,
+          "ab_accuracy": 0.5,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9904020726680756
+        },
+        "policy1_map0": {
+          "n": 8,
+          "global_top1_accuracy": 0.5,
+          "ab_accuracy": 0.5,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9784129336476326
+        },
+        "policy1_map1": {
+          "n": 8,
+          "global_top1_accuracy": 0.5,
+          "ab_accuracy": 0.5,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9774970412254333
+        }
+      },
+      "min_cell_top1_accuracy": 0.5
+    },
+    "generation": {
+      "n": 32,
+      "exact_accuracy": 0.625,
+      "first_token_agreement": true,
+      "errors": [
+        "pilot_celestial__seen__candidate_first__auth1__policy1__map1",
+        "pilot_celestial__seen__candidate_first__auth0__policy0__map1",
+        "pilot_celestial__seen__candidate_first__auth0__policy1__map0",
+        "pilot_celestial__seen__candidate_last__auth1__policy1__map1",
+        "pilot_celestial__seen__candidate_last__auth0__policy0__map1",
+        "pilot_celestial__seen__candidate_last__auth0__policy1__map0",
+        "pilot_ceramic__seen__candidate_first__auth1__policy1__map1",
+        "pilot_ceramic__seen__candidate_first__auth0__policy0__map1",
+        "pilot_ceramic__seen__candidate_first__auth0__policy1__map0",
+        "pilot_ceramic__seen__candidate_last__auth1__policy1__map1",
+        "pilot_ceramic__seen__candidate_last__auth0__policy0__map1",
+        "pilot_ceramic__seen__candidate_last__auth0__policy1__map0"
+      ]
+    }
+  },
+  "stop_reason": "Frozen pilot gate failed; no formal inference allowed"
+}

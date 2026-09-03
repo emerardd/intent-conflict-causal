@@ -1,0 +1,23 @@
+{
+  "inference_started_at_utc": "2026-08-28T08:15:57.265036+00:00",
+  "model_name": "Qwen/Qwen3.5-4B",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "model_class": "Qwen3_5ForConditionalGeneration",
+  "quantization": "4bit_nf4",
+  "parameter_dtypes": [
+    "torch.bfloat16",
+    "torch.uint8"
+  ],
+  "device_map": {},
+  "A_id": 32,
+  "B_id": 33,
+  "prefix_audit": {
+    "passed": true,
+    "groups": 16,
+    "prefixes_checked": {
+      "pre_policy": 16,
+      "pre_mapping": 16
+    }
+  },
+  "prompts_sha256": "287756302fe2ad08318c576c968b49bc3f8c20402366672f09aa43c4ee577b87"
+}

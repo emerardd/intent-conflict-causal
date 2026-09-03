@@ -1,10 +1,36 @@
-.venv/
-.pytest_cache/
-__pycache__/
-*.pyc
+# --- Raw experiment artifacts ----------------------------------------------
+# results/ IS tracked: prompts, baselines, interventions, activations, frozen
+# axes, environment dumps, source snapshots and manifest hashes ship with the
+# repository so scripts/audit_stage*.py can be run by anyone, without a GPU.
+# See docs/output-layout.md.
+#
+# Only the regenerable figure directory is excluded; the figures the reports
+# embed are checked in under docs/figures/.
+plots/
+
+# Model weights and tokenizer caches (multi-GB, fetched from the Hub)
 models/
-results/*.json
-!results/stage2_comparison.json
-results/*.npz
-plots/*.png
-plots/fontlist-*.json
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.uv-cache/
+
+# --- Tooling ---------------------------------------------------------------
+.pytest_cache/
+.pytest_*_repro/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

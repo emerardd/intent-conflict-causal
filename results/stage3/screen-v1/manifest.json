@@ -1,0 +1,105 @@
+{
+  "created_at_utc": "2026-09-02T06:05:48.601942+00:00",
+  "files": {
+    "activations.npz": {
+      "sha256": "1bbf2c654737145aa360ba0162fe02e7fd3793dece172bc6a6e335aa36678af3",
+      "bytes": 3241572
+    },
+    "baseline.json": {
+      "sha256": "80f4b4d3ad331209ba9251c697c8cceaef386d20e8bcb405b8e75be9c6661793",
+      "bytes": 68274
+    },
+    "environment.txt": {
+      "sha256": "25b9f4b00a79b70c567ecc02d07ac63b0d723a52e33226f42327f2c0f75fe4b6",
+      "bytes": 1771
+    },
+    "freeze.json": {
+      "sha256": "09acf1abce16e9f715a89cdb85d95c9b1d15c05f877d79838f2ab21897c53d33",
+      "bytes": 32181
+    },
+    "prefix_diagnostic.json": {
+      "sha256": "4ce08312cc7e57308b8ab477524d160b314fb013dd374ebb6a203762e8c07d0e",
+      "bytes": 1682
+    },
+    "progress.jsonl": {
+      "sha256": "115a60e32162dc931bd04581ce47f0f527ed101d2f3267427d383c65ab9e928d",
+      "bytes": 46626
+    },
+    "prompts.json": {
+      "sha256": "dd5a91a0ca80d33c287a61f0375a08a13136e9950c652f691c349648955286fc",
+      "bytes": 132643
+    },
+    "provenance.json": {
+      "sha256": "175dc1441024e8351a591cd9e24ac23c80d9acec7e4944a28ceda0da0cca86ce",
+      "bytes": 619
+    },
+    "screen_summary.json": {
+      "sha256": "be741e4ef293bdc45ee27c7fc2db027f14fc5718deac8dca2f6991b222bf9bf3",
+      "bytes": 2140
+    },
+    "source_snapshot/configs/stage3_factorial.json": {
+      "sha256": "c34b3fa26d1941dfa94ae8af2236482b2663f838daccc775c6033a49ef060573",
+      "bytes": 786
+    },
+    "source_snapshot/docs/stage3-preregistration.md": {
+      "sha256": "4419f541cea21df9023e677440e57f9fb6f543c8e386030b699c44baa8dad934",
+      "bytes": 7473
+    },
+    "source_snapshot/src/intent_conflict/__init__.py": {
+      "sha256": "47d018ebe26a2a0f4621edd7ea246c0dafc100bd0befaca0be871ac05dc073c6",
+      "bytes": 98
+    },
+    "source_snapshot/src/intent_conflict/analysis.py": {
+      "sha256": "9539f418acdbf2c380c3db13a515d6adec9f2511855d6fd6d4701ae2505c4d15",
+      "bytes": 12767
+    },
+    "source_snapshot/src/intent_conflict/cli.py": {
+      "sha256": "19fb9e4ca6169189dfcf4d9de9be80b08db56f8015f306f49ab30b45e6d28dac",
+      "bytes": 1687
+    },
+    "source_snapshot/src/intent_conflict/data.py": {
+      "sha256": "737199ec8a280fd8f593c79e56c3bb1440e2ca9e1dc9680a15643df281cc54e1",
+      "bytes": 18308
+    },
+    "source_snapshot/src/intent_conflict/experiment.py": {
+      "sha256": "00adda44bf9d6f065fa7c02a04803f0923a1b31b929549a5f5ccd445c0d752cb",
+      "bytes": 28707
+    },
+    "source_snapshot/src/intent_conflict/model.py": {
+      "sha256": "22a7199c04cf7ccca384c882f40af3b744d73a4e9d7ea910bd627b569b94c59c",
+      "bytes": 9871
+    },
+    "source_snapshot/src/intent_conflict/report.py": {
+      "sha256": "5d08e0f48e8c3c6fb13c3487ba1858b3cdd73869d2bce122744e730af5c74530",
+      "bytes": 11877
+    },
+    "source_snapshot/src/intent_conflict/stage2_synthesis.py": {
+      "sha256": "f4ca42c6b627ad2d2132c105de83bff7908cf078c8e9665b7f74ed3b4cc0cef7",
+      "bytes": 29150
+    },
+    "source_snapshot/src/intent_conflict/stage3.py": {
+      "sha256": "87bb302606a5383d73e1e4a4d610dfa1699ab06377f294546b8b3cc52433ae46",
+      "bytes": 23166
+    },
+    "source_snapshot/src/intent_conflict/stage3_analysis.py": {
+      "sha256": "d41e095e33797d5bae366dd09c6c1c3df87f2bf60f123155dc6e2772e12ccf3e",
+      "bytes": 10284
+    },
+    "source_snapshot/src/intent_conflict/stage3_data.py": {
+      "sha256": "319d0cd017632cf8f2c67c993482dc85305a822c8adeb579d8420c4f5131bc19",
+      "bytes": 7867
+    },
+    "source_snapshot/src/intent_conflict/stage3_model.py": {
+      "sha256": "5fe5bbf2844ea26c19d08318fb5ca4ad6a4ec3e6a9cfe594071e88ccb22cc801",
+      "bytes": 3603
+    },
+    "source_snapshot/src/intent_conflict/tokenization.py": {
+      "sha256": "9087b43fcb3ca78dbc44864b8c49cac699cb493410336ac64cfd2f9130f2eb82",
+      "bytes": 1677
+    },
+    "source_snapshot/tests/test_stage3.py": {
+      "sha256": "10bcce184e953770f6d94e931c7a4460da10bfa6cc5e89ccb9f2ec513186f02d",
+      "bytes": 7508
+    }
+  }
+}

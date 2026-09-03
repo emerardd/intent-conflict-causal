@@ -1,0 +1,15 @@
+{
+  "experiment": "stage4_paired_vector_decomposition_v1",
+  "seed": 290826,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "layer": 16,
+  "positions": ["pre_mapping", "answer"],
+  "modes": ["full", "parallel", "perpendicular", "random_full", "random_parallel"],
+  "nf4_test_scenarios": 12,
+  "bf16_test_scenarios": 2,
+  "bootstrap_samples": 5000,
+  "baseline_min_accuracy": 0.9,
+  "reference": "results/stage3/remapping-v2/formal-v1",
+  "output_root": "results/stage4"
+}

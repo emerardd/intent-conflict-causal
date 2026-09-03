@@ -1,0 +1,157 @@
+{
+  "recipient_ids": [
+    "remap_v2__puppet_costume__seen__candidate_first__auth1__policy0__map0",
+    "remap_v2__puppet_costume__seen__candidate_first__auth1__policy0__map1",
+    "remap_v2__puppet_costume__seen__candidate_first__auth0__policy0__map0",
+    "remap_v2__puppet_costume__seen__candidate_first__auth0__policy0__map1",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth1__policy0__map0",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth1__policy0__map1",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth0__policy0__map0",
+    "remap_v2__lantern_stencil__seen__candidate_first__auth0__policy0__map1"
+  ],
+  "nf4": {
+    "pre_mapping/full": {
+      "mean": 2.2891617845743895e-07,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/parallel": {
+      "mean": 1.2946838978677988e-07,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/perpendicular": {
+      "mean": 1.6375270206481218e-07,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/random_full": {
+      "mean": 0.01562514882243704,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/random_parallel": {
+      "mean": 0.0156250802683644,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/full": {
+      "mean": 0.5156251685984898,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/parallel": {
+      "mean": 0.40625016728881747,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/perpendicular": {
+      "mean": 0.10937520975858206,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/random_full": {
+      "mean": 0.03125013531098375,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/random_parallel": {
+      "mean": 0.03125015675323084,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    }
+  },
+  "bf16": {
+    "pre_mapping/full": {
+      "mean": 0.03125006181653589,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/parallel": {
+      "mean": 1.146690919995308e-08,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/perpendicular": {
+      "mean": 0.01562504528556019,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/random_full": {
+      "mean": 0.01562506635673344,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "pre_mapping/random_parallel": {
+      "mean": 0.01562511030351743,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/full": {
+      "mean": 0.5781250499421731,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/parallel": {
+      "mean": 0.39062503777677193,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/perpendicular": {
+      "mean": 0.15625011443626136,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/random_full": {
+      "mean": 0.12499999621650204,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    },
+    "answer/random_parallel": {
+      "mean": 0.07812498678686097,
+      "n": 8,
+      "flips": 0,
+      "ci95": null,
+      "scope": "Two already-observed scenario clusters; descriptive only."
+    }
+  },
+  "scope": "Same eight recipients, same fixed NF4-derived direction axes, precision-specific baseline and donor states. Not a full precision replication."
+}

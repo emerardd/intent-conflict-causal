@@ -1,0 +1,16 @@
+# This repository is byte-verified. Each run's manifest.json and freeze.json,
+# and results/stage3/delivery.json, store sha256 hashes of files exactly as
+# they exist on disk, and scripts/audit_stage*.py recompute them on checkout.
+#
+# Any end-of-line conversion changes those bytes and makes every audit fail on
+# a fresh clone, so line-ending normalization is disabled repository-wide.
+# Do not add 'text=auto' here.
+* -text
+
+# Binary assets.
+*.png binary
+*.npz binary
+*.safetensors binary
+
+# SVG figures are text, but should not be diffed line by line in review.
+*.svg -diff

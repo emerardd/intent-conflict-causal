@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-08-28T08:07:58.329168+00:00",
+  "classification": "post-hoc instrumentation diagnostic; not new formal data",
+  "script_sha256": "dc6f448792516574a98cf6711a072ad153ee3433a9f42fb69b2252514ea73ad6",
+  "original_baseline_margin_error": 0.0,
+  "original_baseline_argmax_agrees": true,
+  "lengths": {
+    "original": 214,
+    "other_policy_length": 216,
+    "other_suffix_same_length": 214,
+    "prefix_only": 148
+  },
+  "comparisons": {
+    "original": {
+      "max_absolute_difference": 0.0,
+      "relative_l2_difference": 0.0,
+      "per_layer_max_abs": {
+        "4": 0.0,
+        "8": 0.0,
+        "12": 0.0,
+        "16": 0.0,
+        "20": 0.0,
+        "24": 0.0,
+        "28": 0.0
+      }
+    },
+    "other_policy_length": {
+      "max_absolute_difference": 0.0625,
+      "relative_l2_difference": 0.013075602240860462,
+      "per_layer_max_abs": {
+        "4": 0.015625,
+        "8": 0.015625,
+        "12": 0.03125,
+        "16": 0.0625,
+        "20": 0.0234375,
+        "24": 0.046875,
+        "28": 0.046875
+      }
+    },
+    "other_suffix_same_length": {
+      "max_absolute_difference": 0.0,
+      "relative_l2_difference": 0.0,
+      "per_layer_max_abs": {
+        "4": 0.0,
+        "8": 0.0,
+        "12": 0.0,
+        "16": 0.0,
+        "20": 0.0,
+        "24": 0.0,
+        "28": 0.0
+      }
+    },
+    "prefix_only": {
+      "max_absolute_difference": 0.0,
+      "relative_l2_difference": 0.0,
+      "per_layer_max_abs": {
+        "4": 0.0,
+        "8": 0.0,
+        "12": 0.0,
+        "16": 0.0,
+        "20": 0.0,
+        "24": 0.0,
+        "28": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "status": "pass",
+  "independent_of_stage5b_analysis_code": true,
+  "identity": {
+    "baseline_rows": 48,
+    "scenario_clusters": 12,
+    "intervention_rows": 1344,
+    "conditions": 28,
+    "rows_per_condition": [
+      48
+    ]
+  },
+  "independent_scale": {
+    "position_medians": {
+      "pre_mapping": 0.5958767498058,
+      "answer": 1.1431476592837495
+    },
+    "common_scale": 0.5958767498058,
+    "n_train_rows": 64
+  },
+  "axis_checks": {
+    "pre_mapping": {
+      "max_norm_error": 1.1102230246251565e-16,
+      "max_mutual_dot": 4.440892098500626e-16,
+      "max_real_axis_dot": 7.28583859910259e-17
+    },
+    "answer": {
+      "max_norm_error": 1.1102230246251565e-16,
+      "max_mutual_dot": 4.440892098500626e-16,
+      "max_real_axis_dot": 5.117434254131581e-17
+    }
+  },
+  "mapping_accuracy": {
+    "False": 1.0,
+    "True": 1.0
+  },
+  "independent_primary": {
+    "answer/answer-minus-random_mean": {
+      "mean": 0.19895835074409354,
+      "ci95": [
+        0.18046875970985943,
+        0.21901044332414735
+      ],
+      "scenario_differences": {
+        "orrery_gear": 0.26250010753283276,
+        "botanical_press": 0.18437491195218172,
+        "panorama_drum": 0.22187491941440385,
+        "weather_vane": 0.17187507652415662,
+        "music_scroll": 0.20312489299103617,
+        "specimen_drawer": 0.16562505315523596,
+        "celestial_globe": 0.2156250333209755,
+        "peep_show_box": 0.15937506607733667,
+        "mechanical_fan": 0.17500001785519997,
+        "signal_flag": 0.21250007061753423,
+        "relief_medallion": 0.25625001967418937,
+        "paper_lantern": 0.15937503981404005
+      }
+    },
+    "answer/answer-minus-pre_mapping": {
+      "mean": 0.17708334512766064,
+      "ci95": [
+        0.15625002013496972,
+        0.1979166985902945
+      ],
+      "scenario_differences": {
+        "orrery_gear": 0.2500000845757313,
+        "botanical_press": 0.18750003949389793,
+        "panorama_drum": 0.18749984024907462,
+        "weather_vane": 0.12499998846033122,
+        "music_scroll": 0.15624993504025042,
+        "specimen_drawer": 0.12500009080395103,
+        "celestial_globe": 0.18749999803549144,
+        "peep_show_box": 0.1562500735744834,
+        "mechanical_fan": 0.15625003041350283,
+        "signal_flag": 0.21875005052424967,
+        "relief_medallion": 0.21874999778810889,
+        "paper_lantern": 0.15625001257285476
+      }
+    },
+    "position-by-direction-interaction": {
+      "mean": 0.19270832310454958,
+      "ci95": [
+        0.1692707996715702,
+        0.2161458771295353
+      ],
+      "scenario_differences": {
+        "orrery_gear": 0.2812501906300895,
+        "botanical_press": 0.2187501361768227,
+        "panorama_drum": 0.18749975319951773,
+        "weather_vane": 0.1874998859129846,
+        "music_scroll": 0.18749991463846527,
+        "specimen_drawer": 0.1250000880099833,
+        "celestial_globe": 0.18749980414577294,
+        "peep_show_box": 0.15625004866160452,
+        "mechanical_fan": 0.21875004743924364,
+        "signal_flag": 0.12499996437691152,
+        "relief_medallion": 0.21874998096609488,
+        "paper_lantern": 0.21875006309710443
+      }
+    }
+  },
+  "independent_decisions": {
+    "answer_direction_over_random": true,
+    "answer_direction_over_equal_norm_cross": true,
+    "position_by_direction_interaction": true
+  },
+  "random_axis_effects": {
+    "pre_mapping": {
+      "random_00": -0.020833350812608842,
+      "random_01": -0.02083337848186299,
+      "random_02": -0.023437520542453665,
+      "random_03": -0.007812512891784232,
+      "random_04": -0.023437505294471823,
+      "random_05": -1.0961230145767331e-08,
+      "random_06": -0.020833316482215498,
+      "random_07": -0.023437524620627908,
+      "random_08": -0.020833338905504206,
+      "random_09": -0.0078125017110627
+    },
+    "answer": {
+      "random_00": -0.013020837817748543,
+      "random_01": 0.010416666054273568,
+      "random_02": -0.007812510724761523,
+      "random_03": -0.05468753312015906,
+      "random_04": 0.007812483420517917,
+      "random_05": -0.01562501537288578,
+      "random_06": -0.013020865953876637,
+      "random_07": 0.018229128800157923,
+      "random_08": -0.00781253485426229,
+      "random_09": -0.03906248810259664
+    }
+  },
+  "categorical": {
+    "top1_flips": 0,
+    "donor_directed_flips": 0,
+    "invalid_first_tokens": 0
+  },
+  "delivery": {
+    "equal_norm_rows": 1152,
+    "requested_norm_min": 0.5958767498057999,
+    "requested_norm_max": 0.5958767498058001,
+    "delivered_norm_min": 0.5951223373413086,
+    "delivered_norm_max": 0.5979580879211426,
+    "max_delivered_norm_error": 0.0020813381153426125,
+    "generation_checks": 32,
+    "generation_agreement": true,
+    "null_checks": 2,
+    "frozen_source_hashes_ok": true
+  }
+}

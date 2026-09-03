@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "config_sha256": "ec33f0633b24e69153ab4ddd9c1a87af80d3cc470ae573ee37c9d0926a4fb842",
+  "behavior": {
+    "screen/seen": {
+      "n": 16,
+      "cells": {
+        "policy0_map0": {
+          "n": 8,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9994589760899544
+        },
+        "policy0_map1": {
+          "n": 8,
+          "global_top1_accuracy": 1.0,
+          "ab_accuracy": 1.0,
+          "format_rate": 1.0,
+          "mean_ab_mass": 0.9988774880766869
+        }
+      },
+      "min_cell_top1_accuracy": 1.0
+    },
+    "generation": {
+      "n": 16,
+      "exact_accuracy": 1.0,
+      "first_token_agreement": true,
+      "errors": []
+    }
+  },
+  "stop_reason": null
+}

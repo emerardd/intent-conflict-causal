@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-08-28T11:54:47.385269+00:00",
+  "status": "both precision diagnostics completed and audited",
+  "source_sha256": {
+    "src/intent_conflict/stage4.py": "42879311aa3bc0155e53934b416a5e0c70215d7a991bfe4a5e6b322a39830768",
+    "tests/test_stage4.py": "0f0b44b0bef86755a4633117a3f7a45b96accafe728aa452a8b7ffbcbcf73a17",
+    "configs/stage4_diagnostic.json": "5d6d56f41a6d1846e24927782bf4249767a92a471549a82127ead25d1c78307e",
+    "docs/stage4-preregistration.md": "9589b85046eb762b8b811fba4b00aaaca1dc522db8921be81ab2c0de44e83507",
+    "docs/stage4-reproduction.md": "113506d599026736b1b8d2b22e8883d0594222e619b7f0169e1d99c1332a31e1",
+    "docs/stage4-results.zh-CN.md": "7b681fc16c4b7460093491dbdc45c6a862fe115a39db4c0174193a883661d0d9",
+    "scripts/audit_stage4.py": "279526678f7a62a29bb0bc363c3ac60c11ee00ca23c511e51e041e09e95e685c",
+    "scripts/finalize_stage4.py": "784484e7fa9334af52232f2e3178eec46b167a59a7d69ea45e5b3f5141e83455"
+  },
+  "scope": "Exploratory diagnostic; no model training, downloads, Git commit or push; Stage 3 untouched."
+}

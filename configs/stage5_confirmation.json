@@ -1,0 +1,17 @@
+{
+  "experiment": "stage5_position_by_direction_confirmation_v1",
+  "seed": 300826,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "precision": "nf4",
+  "layer": 16,
+  "positions": ["pre_mapping", "answer"],
+  "source_axes": ["pre_mapping", "answer"],
+  "n_scenarios": 12,
+  "bootstrap_samples": 10000,
+  "baseline_min_mapping_accuracy": 0.9,
+  "pre_mapping_equivalence_bound": 0.1,
+  "runtime_limit_seconds": 1200,
+  "axes_reference": "results/stage4/nf4/axes.npz",
+  "output": "results/stage5/confirmation-v1"
+}

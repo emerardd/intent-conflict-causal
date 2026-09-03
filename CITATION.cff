@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you reference this work, please cite it as below."
+title: "Pre-action user-authorization conflict: causal tests of authorization representations"
+abstract: >-
+  A five-stage pre-registered interpretability study asking whether small
+  open-weight chat models represent whether the user authorized the specific
+  action they are about to take, and whether that representation is causally
+  load-bearing for the decision. Authorization status is linearly decodable
+  with held-out AUROC 1.00, but frozen-direction interventions produce
+  statistically detectable and behaviorally negligible effects with zero
+  decision flips.
+authors:
+  - alias: emerard
+repository-code: "https://github.com/emerardd/intent-conflict-causal"
+license: MIT
+version: "0.1.0"
+date-released: "2026-09-02"
+keywords:
+  - interpretability
+  - mechanistic-interpretability
+  - activation-patching
+  - ai-safety
+  - language-models

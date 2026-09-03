@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-08-29T10:34:53.270341+00:00",
+  "snapshot": "C:\\Users\\dreamer\\.cache\\huggingface\\hub\\models--Qwen--Qwen3.5-4B\\snapshots\\851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "model_class": "Qwen3_5ForConditionalGeneration",
+  "A_id": 32,
+  "B_id": 33,
+  "parameter_dtypes": [
+    "torch.bfloat16",
+    "torch.uint8"
+  ],
+  "device_map": {}
+}

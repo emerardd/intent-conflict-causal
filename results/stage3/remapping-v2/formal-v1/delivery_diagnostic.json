@@ -1,0 +1,60 @@
+{
+  "created_at_utc": "2026-08-28T08:24:35.602753+00:00",
+  "script_sha256": "01b0000892225d81955da5c8c6a5689c62900586fb2e282c35d1a039bd2cbbdd",
+  "classification": "post-hoc implementation delivery diagnostic, not a new hypothesis test",
+  "recipient_id": "remap_v2__puppet_costume__seen__candidate_first__auth1__policy0__map0",
+  "layer": 16,
+  "position": 158,
+  "forwards": 4,
+  "cases": {
+    "baseline": {
+      "hidden_dtype": "torch.bfloat16",
+      "logits_dtype": "torch.bfloat16",
+      "actual_delta_norm": 0.0,
+      "requested_delta_norm": 0.0,
+      "actual_direction_projection": 0.0,
+      "baseline_hidden_norm": 10.61082935333252,
+      "margin": -4.875000177882612,
+      "margin_error_vs_saved": 0.0,
+      "top1_label": "A",
+      "top1_matches_saved": true
+    },
+    "null": {
+      "hidden_dtype": "torch.bfloat16",
+      "logits_dtype": "torch.bfloat16",
+      "actual_delta_norm": 0.0,
+      "requested_delta_norm": 0.0,
+      "actual_direction_projection": 0.0,
+      "baseline_hidden_norm": 10.61082935333252,
+      "margin": -4.875000177882612,
+      "margin_error_vs_saved": 0.0,
+      "top1_label": "A",
+      "top1_matches_saved": true
+    },
+    "minus_one": {
+      "hidden_dtype": "torch.bfloat16",
+      "logits_dtype": "torch.bfloat16",
+      "actual_delta_norm": 0.6122676730155945,
+      "requested_delta_norm": 0.6105854692026618,
+      "actual_direction_projection": -0.6120420800974979,
+      "baseline_hidden_norm": 10.61082935333252,
+      "margin": -4.875000014901161,
+      "margin_error_vs_saved": 0.0,
+      "top1_label": "A",
+      "top1_matches_saved": true
+    },
+    "plus_one": {
+      "hidden_dtype": "torch.bfloat16",
+      "logits_dtype": "torch.bfloat16",
+      "actual_delta_norm": 0.612307608127594,
+      "requested_delta_norm": 0.6105854692026618,
+      "actual_direction_projection": 0.6120822976739978,
+      "baseline_hidden_norm": 10.61082935333252,
+      "margin": -4.875000079162419,
+      "margin_error_vs_saved": 0.0,
+      "top1_label": "A",
+      "top1_matches_saved": true
+    }
+  },
+  "scope": "Checks that nonzero perturbations survive dtype casting and reproduce saved outputs. Does not establish a behavior-changing positive control or exclude redundancy."
+}

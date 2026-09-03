@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-08-28T11:54:47.376862+00:00",
+  "runs": {
+    "nf4": {
+      "precision": "nf4",
+      "reference_and_snapshot_hashes": true,
+      "donor_identity_alignment": true,
+      "train_only_fixed_axes": true,
+      "decomposition_norms_delivery": true,
+      "raw_statistics_and_cluster_ci": true,
+      "paired_comparisons": true,
+      "generation_and_null_checks": true,
+      "artifact_manifest": true,
+      "baseline_n": 48,
+      "intervention_n": 480,
+      "mapping_accuracy": {
+        "False": 1.0,
+        "True": 1.0
+      },
+      "scope": "Independent artifact/statistical recomputation, not independent model replication."
+    },
+    "bf16": {
+      "precision": "bf16",
+      "reference_and_snapshot_hashes": true,
+      "donor_identity_alignment": true,
+      "train_only_fixed_axes": true,
+      "decomposition_norms_delivery": true,
+      "raw_statistics_and_cluster_ci": true,
+      "paired_comparisons": true,
+      "generation_and_null_checks": true,
+      "artifact_manifest": true,
+      "baseline_n": 8,
+      "intervention_n": 80,
+      "mapping_accuracy": {
+        "False": 1.0,
+        "True": 1.0
+      },
+      "scope": "Independent artifact/statistical recomputation, not independent model replication."
+    }
+  }
+}

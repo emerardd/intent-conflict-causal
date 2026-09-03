@@ -1,0 +1,19 @@
+{
+  "experiment": "stage5b_equal_norm_position_direction_v1",
+  "seed": 310826,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "precision": "nf4",
+  "layer": 16,
+  "positions": ["pre_mapping", "answer"],
+  "source_axes": ["pre_mapping", "answer"],
+  "n_random_axes": 10,
+  "n_scenarios": 12,
+  "bootstrap_samples": 10000,
+  "baseline_min_mapping_accuracy": 0.9,
+  "runtime_limit_seconds": 1200,
+  "scale_method": "minimum_of_positionwise_median_absolute_local_donor_projection_on_stage3_train",
+  "stage3_reference": "results/stage3/remapping-v2/formal-v1",
+  "axes_reference": "results/stage4/nf4/axes.npz",
+  "output": "results/stage5b/confirmation-v1"
+}
